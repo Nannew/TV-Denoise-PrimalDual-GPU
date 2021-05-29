@@ -10,7 +10,7 @@ The test image is a standard 512x512 Grayscale (8-bit) Lena image from [Standard
 
 The C++ CPU implementation needs 4.13699 seconds to run 1000 iterations on a 512x512 gray-scale image during the experiment, 0.0041 second per iteration. While the C++ GPU implementation took only 0.271657 seconds to run 1000 iterations, 0.00027 second per iteration. Therefore, for an image size of 512x512, parallel the code with GPU is more than 15 times faster than CPU implementation. This difference will become greater as the image size increases.
 
-Note that for the GPU implementation, the data transfer time between CPU and GPU is included during the comparison. The GPU implementation needs to upload the image from CPU to GPU before computation and download image back to GPU after convergence. However, this time is trivial compared with the total computation time.
+Note that for the GPU implementation, the data transfer time between CPU and GPU is also considered during the comparison. The GPU implementation needs to upload the image from CPU to GPU before computation and download image back to CPU after convergence. However, this time is trivial compared with the total computation time.
 
 <img src="../master/Data/Test_Result.png?raw=true" width="700" >
 
