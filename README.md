@@ -2,7 +2,7 @@
 
 This repository gives an example of how to implement an image processing algorithm on the GPU with Nvidia CUDA and CMake.
 1. The example compared the implementation of the same TV-L1 denoising algorithm on the CPU and GPU.
-2. The OpenCV CUDA module (cv::cuda::gpuMat ) is used to host the image data instead of the common method. This requires building OpenCV with CUDA.
+2. The OpenCV CUDA module (cv::cuda::GpuMat ) is used to host the image data instead of the common method. This requires building OpenCV with CUDA.
 
 # Experiment Result
 
@@ -14,11 +14,11 @@ Note that for the GPU implementation, the data transfer time between CPU and GPU
 
 <img src="../master/Data/Test_Result.png?raw=true" width="700" >
 
-* Original 512x512 Grayscale (8-bit) Lena image (Left) and noisy image after adding Gaussian noise (Right). *
+* Original 512x512 Grayscale (8-bit) Lena image (Left) and noisy image after adding Gaussian noise (Right). 
 
 <img src="../master/Data/lena512.bmp?raw=true" width="400" height="400">  <img src="../master/Data/lenna_512_noisy.bmp?raw=true" width="400" height="400">
 
 
-* Denoised image using TV-L1 denoising on GPU (Left) and CPU (Right). The denoised image after processing is very close after 1000 iterations. *
+* Denoised image using TV-L1 denoising on GPU (Left) and CPU (Right). The denoised image after processing is very close after 1000 iterations. 
 
 <img src="../master/Data/lenna_512_denoised_gpu.bmp?raw=true" width="400" height="400">  <img src="../master/Data/lenna_512_denoised_cpu.bmp?raw=true" width="400" height="400">
